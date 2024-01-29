@@ -1,0 +1,18 @@
+languageCode: de-ch
+title: Procedere Olten
+theme: wl-theme
+relativeURLs: true
+params:
+  logo: procedere_logo.svg
+  favicon: procedere_favicon.png
+  styles:
+    wl-orange: "#D9DF20"
+    wl-blue: "#1382BB"
+    wl-black: "#000"
+    wl-white: "#fff"
+    wl-footer-color: "#000"
+imaging:
+  quality: 90
+  resampleFilter: Lanczos
+  hint: picture
+  anchor: Top

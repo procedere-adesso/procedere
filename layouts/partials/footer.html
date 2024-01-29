@@ -1,0 +1,29 @@
+<footer id="footer">
+    <div class="uk-container-expand wl-footer">
+        <img alt="brush stroke" src='{{ (resources.Get "img/brush-stroke.svg").RelPermalink }}' style="top: -1vw;width: 100%;" />
+        <div class="uk-container uk-padding-large">
+            <div class="uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-1" uk-grid>
+                {{ range $.Site.Data.footer }} 
+                <div>
+                    {{ .column | markdownify }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        <img alt="brush stroke" src='{{ (resources.Get "img/brush-stroke.svg").RelPermalink }}' style="bottom: -1vw;width: 100%;" />
+    </div>
+    <div class="uk-container wl-affiliations">
+        <div class="uk-grid-large" uk-grid>
+            <div class="uk-width-3-5 uk-width-1-3@s">
+                <a aria-label="Forum BMG Aargau Link" href="https://www.bgm-ag.ch/"><img alt="Forum BMG Aargau" src='{{ (resources.Get "img/bmg.svg").RelPermalink }}' /></a>
+            </div>
+            <div class="uk-width-3-5 uk-width-1-3@s">
+                <a aria-label="Netzwerk Case Management Schweiz Link" href="https://www.bgm-ag.ch/"><img alt="Netzwerk Case Management Schweiz" src='{{ (resources.Get "img/ncms.svg").RelPermalink }}' /></a>
+            </div>
+            <div class="uk-width-3-5 uk-width-1-3@s">
+                <a aria-label="Gesundheitsföerderung Schweiz Link" href="https://gesundheitsfoerderung.ch//"><img alt="Gesundheitsföerderung Schweiz" src='{{ (resources.Get "img/gfs.svg").RelPermalink }}' /></a>
+            </div>
+        </div>
+
+    </div>
+</footer>

@@ -1,0 +1,18 @@
+- title: Case<br>Management
+  mobile_title: Case Management
+  autosub: /flyer/case_mgmt
+- title: Job<br>Coachint
+  mobile_title: Job Coaching
+  autosub: /flyer/job_coaching
+- title: Workshop/<br>Schulungen
+  mobile_title: Workshop/Schulungen
+  autosub: /flyer/workshop
+- title: Betriebliches<br>Gesundheitsmanagement
+  mobile_title: Betriebliches Gesundheitsmanagement
+  autosub: /flyer/betr_gsmgmt
+- title: Über uns<br>&nbsp;
+  mobile_title: Über uns
+  sub:
+    - /haus
+    - /team
+    - /stellen
