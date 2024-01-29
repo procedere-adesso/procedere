@@ -66,22 +66,22 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo
-          eval $(ssh-agent -s)
-          ssh-add - <<< '${{ secrets.DEPLOY_KEY }}'
-          rsync -e 'ssh -p ${{ secrets.DEPLOY_PORT }} -o StrictHostKeyChecking=no' --archive --delete --exclude '*.jpg' public/* 'procedere@${{ secrets.DEPLOY_HOST }}:'
+#          eval $(ssh-agent -s)
+#          ssh-add - <<< '${{ secrets.DEPLOY_KEY }}'
+#          rsync -e 'ssh -p ${{ secrets.DEPLOY_PORT }} -o StrictHostKeyChecking=no' --archive --delete --exclude '*.jpg' public/* 'procedere@${{ secrets.DEPLOY_HOST }}:'
 
-#      - name: Upload artifact
-#        uses: actions/upload-pages-artifact@v1
-#        with:
-#          path: ./public
-# Deployment job
-#  deploy:
-#    environment:
-#      name: github-pages
-#      url: ${{ steps.deployment.outputs.page_url }}
-#    runs-on: ubuntu-latest
-#    needs: build
-#    steps:
-#      - name: Deploy to GitHub Pages
-#        id: deployment
-#        uses: actions/deploy-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
