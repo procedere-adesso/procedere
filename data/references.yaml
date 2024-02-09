@@ -7,9 +7,11 @@
 - logo: post.svg
   name: Die Schweizerische Post
   email: rolf.simon@post.ch
+  scale: 60%
 - logo: pallas.svg
   name: Pallas Kliniken
   email: vera.tscharland@pallas-gruppe.ch
+  scale: 90%
 - logo: baloise.svg
   name: Baloise Versicherung
   email: thomas.lack@baloise.ch
