@@ -1,17 +1,20 @@
 ---
 title: Claudia Meschi
 sort: Meschi Claudia
-date: 2023-07-06
-role: Geschäftsführerin
+date: 06.07.2023
+role: Geschäftsführerin, Case Managerin
 email: claudia.meschi@procedere-cmg.ch
-phone: 062 207 00 10
+phone: 062 207 00 14
 edu:
   - Sozialarbeiterin & Sozialpädagogin FH
-  - Fachkurse in Besuchsregelung, Mediation und Kommunikation 
-  - CAS Gesundheitsmanagement Fachhochschule Luzern 
+  - Führungsausbildung Fachhochschule Nordwestschweiz
+  - CAS Gesundheitsmanagement Fachhochschule Luzern
+  - Erwachsenbildnerin SVEB 1
   - Stressregulationstrainerin SZS
+  - Laufbahncoach FHNW
   - Stressmanagement und Stressregulations-Trainerin, SZS (Schweiz. Zentrum Stressforschung)
+  - Führung von Case Management Mandaten für Krankentaggeldversicherungen, Invalidenversicherungen und Privatunternehmen
+  - Kaufmännische Grundausbildung
 core:
-  - Beratungen von Familien in komplexen Situationen
-  - Vermittlung und Mediation bei (Hoch) Strittigkeit
+  - Berufs- und Führungspraxis als Sozialarbeiterin, Case Managerin sowie Seminarleiterin in Unternehmen und NPO's
 ---

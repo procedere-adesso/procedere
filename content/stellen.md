@@ -4,4 +4,4 @@ Type: flyer
 Date: 2023-08-16
 
 ---
-Zurzeit haben wir keine offenen Vakanz.
+Zurzeit haben wir keine offene Vakanz.

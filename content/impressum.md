@@ -5,7 +5,7 @@ Date: 2023-01-01
 
 ## Herausgeberin
 
-Procedere\
+procedere GmbH\
 Sonneggstrasse 11\
 4600 Olten
 
@@ -13,4 +13,4 @@ Sonneggstrasse 11\
 
 ## Handelsregistereintrag
 
-[adesso – Soziale Arbeit in der Familie GmbH](https://so.chregister.ch/cr-portal/auszug/auszug.xhtml?uid=CHE-456.164.064)
+[procedere GmbH](https://so.chregister.ch/cr-portal/auszug/auszug.xhtml?uid=CHE-162.365.020)

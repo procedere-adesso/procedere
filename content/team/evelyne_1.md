@@ -10,6 +10,5 @@ edu:
   - Berufsbildnerin KV
   - Dipl. Kaumännische Ausbildung EFZ
 core:
-  - Dienstleistungsorientiert
-
+  - Berufliche Integration
 ---
