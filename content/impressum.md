@@ -1,6 +1,6 @@
 ---
 Title: Impressum
-Date: 2023-01-01
+Date: 2025-10-03
 ---
 
 ## Herausgeberin

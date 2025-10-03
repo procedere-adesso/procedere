@@ -1,24 +1,21 @@
 ---
-Title: Supported education
-Date: 2024-01-29
+Title: Supported Education
+Date: 2025-10-03
 Weight: 1
 Contact: anja_1
 Downloads:
   - Title: Supported Education<br/>Flyer mit Detailbeschreibung
     HRef: ../flyer_supported_education_2025.pdf
 ---
-Das Support education richtet sich an Jugendliche und junge Erwachsene, die sich in einer belastenden, blockierten Situation befinden:
+Das Support Education richtet sich an Jugendliche und junge Erwachsene, die sich in einer belastenden, blockierten Situation befinden.
 
-- schulisch oder beruflich
-- nach Ausbildungs- oder Arbeitsintegrationsprogrammen
-- sozial
-- familiär
+Mit Fokus auf die Lebenssituation, den Willen und die individuellen Ressourcen begleiten wir dabei, Handlungskompetenzen zu entdecken, zu reaktivieren und in die Umsetzung zu bringen. Dadurch kann die herausfordernde Situation verbessert und stabilisiert werden. Zusammen entwickeln wir Strategien, um eine erfolgreiche (Re-)Integration in das soziale und berufliche Umfeld zu erzielen und die gewünschten Veränderungen herbeizuführen.
 
-Oder bisher keine passende Unterstützung fanden, weil das bestehende Beratungs- und Unterstützungsangebot nicht auf ihre Bedürfnisse zugeschnitten ist.
+Folgende Arbeitsschwerpunkte umfasst die Begleitung:
 
-Oder ihre Situation verändern wollen durch:
-
-- Erweiterung ihrer schulischen, beruflichen oder sozialen Möglichkeiten
-- Das Suchen individueller Lösungsansätze
-- Die Stabilisierung oder Veränderung ihrer aktuellen Lebenssituation
-- Unterstützung im selbstbestimmten Realisieren ihres Weges
+- Komplettes Bewerbungsdossier erstellen
+- Interview trainieren
+- Unterstützung in der Lehrstellensuche
+- Begleitung während der Ausbildung/ Lehre
+- Bewerbungscoaching für Anschluss an die Ausbildung
+- Job Coaching an neuer Stelle

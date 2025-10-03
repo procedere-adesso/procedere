@@ -1,7 +1,7 @@
 ---
-Title: Hauptsitz Olten
+Title: Standort Olten
 NoTitle: true
-Date: 2023-08-16
+Date: 2025-10-03
 Weight: 3
 Type: flyer
 Downloads:
@@ -15,6 +15,9 @@ intro: |
   Wir freuen uns, Sie in unserem schönen Bürohaus
   im Wohnquartier Fustlig/Säli auf der
   rechten Aareseite in Olten begrüssen zu dürfen.
+
+  Kurzzeit Parkplätze finden Sie im Quartier, weiter Parkplätze stehen im
+  gegenüberliegenden Parkhaus vom Sälipark zur Verfügung.
 ---
 
 

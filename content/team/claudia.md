@@ -1,7 +1,7 @@
 ---
 title: Claudia Meschi
 sort: Meschi Claudia
-date: 06.07.2023
+date: 2025-10-03
 role: Geschäftsführerin, Case Managerin
 email: claudia.meschi@procedere-cmg.ch
 phone: 062 207 00 14
