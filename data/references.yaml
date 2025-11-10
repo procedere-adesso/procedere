@@ -1,20 +1,17 @@
-- logo: smpv.svg
-  name: Metzgerei-Personal Verband
-  email: mpv@mpv.ch
-- logo: mammut.svg 
-  name: Mammut Lift
-  email: m.bruehwiler@mammut-lift.ch
 - logo: post.svg
   name: Die Schweizerische Post
-  email: rolf.simon@post.ch
   scale: 60%
-- logo: pallas.svg
-  name: Pallas Kliniken
-  email: vera.tscharland@pallas-gruppe.ch
-  scale: 90%
+
 - logo: baloise.svg
   name: Baloise Versicherung
-  email: thomas.lack@baloise.ch
 - logo: profund.svg
   name: Profund Vorsorgeeinrichtung
-  email: h.diermann@profond.ch
+
+- logo: ivso.svg
+  name: IVSO Vorsorgeeinrichtung
+
+- logo: svaag.png
+  name: SVA Aargau
+
+- logo: iart.png
+  name: IART AG
