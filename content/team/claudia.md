@@ -1,6 +1,6 @@
 ---
 title: Claudia Meschi
-sort: Meschi Claudia
+sort: 02 Meschi Claudia
 date: 2025-10-03
 role: Geschäftsführerin, Case Managerin
 email: claudia.meschi@procedere-cmg.ch

@@ -2,7 +2,7 @@
 Title: Supported Education
 Date: 2025-10-03
 Weight: 1
-Contact: anja_1
+Contact: anja
 Downloads:
   - Title: Supported Education<br/>Flyer mit Detailbeschreibung
     HRef: ../flyer_supported_education_2025.pdf

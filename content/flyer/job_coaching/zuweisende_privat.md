@@ -2,7 +2,7 @@
 Title: Für Zuweisende und Privatpersonen
 Date: 2025-10-03
 Weight: 1
-Contact: anja_1
+Contact: anja
 Downloads:
   - Title: Job Coaching<br/>Flyer mit Detailbeschreibung
     HRef: ../flyer_job_coaching_2025.pdf

@@ -2,7 +2,7 @@
 Title: Für Zuweisende und Unternehmen
 Date: 2025-10-03
 Weight: 1
-Contact: anja_1
+Contact: anja
 Downloads:
   - Title: Case Management im Unternehmen<br/>Flyer mit 6 Prozessschritten
     HRef: ../flyer_case_management_2025.pdf

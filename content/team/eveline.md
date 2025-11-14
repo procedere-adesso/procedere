@@ -1,6 +1,6 @@
 ---
 title: Eveline Balsiger
-sort: Balsiger Eveline
+sort: 01 Balsiger Eveline
 date: 2025-10-03
 role: Assistenin der Geschäftsleitung
 email: eveline.balsiger@procedere-cmg.ch

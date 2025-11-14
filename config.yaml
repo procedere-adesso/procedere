@@ -5,8 +5,11 @@ relativeURLs: true
 params:
   logo: procedere_logo.svg
   favicon: procedere_favicon.png
+  sortedStaff: true
   styles:
-    wl-orange: "#D9DF20"
+#    wl-orange: "#D9DF20"
+#   make darker for better contrast
+    wl-orange: "#a1a602"
     wl-blue: "#1382BB"
     wl-black: "#000"
     wl-white: "#fff"
