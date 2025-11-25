@@ -1,5 +1,5 @@
 ---
-Title: Standort Olten
+Title: Unser Bürohaus
 NoTitle: true
 Date: 2025-10-03
 Weight: 3
