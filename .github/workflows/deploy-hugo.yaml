@@ -65,6 +65,11 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
+          # create ssh key pair for user procedere on webhost (web-volki-01)
+          #     add private key to github secrets as DEPLOY_KEY
+          #     add public key to ~/.ssh/authorized_keys on webhost like this: command="rrsync /home/procedere/public_html",restrict PUBLIC_KEY_STRING_HERE
+          # DEPLOY_HOST is login.oetiker.ch
+          # DEPLOY_PORT is whatever port is forwarded to ssh on login.oetiker.ch
           hugo
           eval $(ssh-agent -s)
           ssh-add - <<< '${{ secrets.DEPLOY_KEY }}'
