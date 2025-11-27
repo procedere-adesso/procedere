@@ -19,3 +19,4 @@ imaging:
   resampleFilter: Lanczos
   hint: picture
   anchor: Top
+
