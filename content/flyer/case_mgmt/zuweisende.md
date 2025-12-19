@@ -12,3 +12,5 @@ Ziel des Case Management ist die Wiederherstellung der Leistungsfähigkeit, Inte
 Durch das Case Management wird ein individueller und zielorientierter Unterstützungsprozess initialisiert, die Case Manager:in koordiniert und steuert diesen über einen definierten Zeitraum. 
 
 Dies ist dann zielführend, wenn Menschen, die aufgrund komplexer Problemlagen mehrere Unterstützungsangebote in Anspruch nehmen müssen. Die Case Manager:in stellt sicher, dass alle beteiligten Stellen bedarfsgerecht geplant, organisiert und koordiniert werden.
+
+Sie finden nützliche und fachliche Beiträge wie Leitfäden, Checklisten, Formulare und Praxistipps, etc. unter: [www.compasso.ch](https://www.compasso.ch/aktuelles/download-center)
