@@ -8,7 +8,7 @@ Downloads:
 
 ---
 
-# Zurzeit haben wir keine offene Vakanz.
+# Zurzeit haben wir keine offene Vakanz
 
 
 
