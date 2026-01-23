@@ -9,7 +9,7 @@ Downloads:
 
 ---
 
-# Job Coach / Case Manager:in 60-80%
+# Offene Stellen
 
-Neugierig geworden? Entdecken Sie jetzt unser Inserat — vielleicht sind genau Sie die Verstärkung für unser Team!
+Zurzeit haben wir keine offene Vakanz.
 
