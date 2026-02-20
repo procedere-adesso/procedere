@@ -2,7 +2,7 @@
 title: Anja Aeschbach
 sort: 03 Aeschbach Anja
 date: 2025-11-25
-role: Case Managerin, Job Coach
+role: Case Managerin / Job Coachin
 email: anja.aeschbach@procedere-cmg.ch
 phone: 062 207 07 80
 edu:
