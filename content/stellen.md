@@ -3,12 +3,15 @@ Title: Freie Stellen
 Type: flyer
 Date: 2025-10-03
 Downloads:
-    - Title: 
-      HRef: 
+    - Title: Stelleninserat Job Coach 80 % <br/>PDF Download
+      HRef: 26.06 Stelleninserat.pdf
 
 ---
 
-# Zurzeit haben wir keine offene Vakanz
+# Job Coach 80 %
+
+Wir suchen Verstärkung durch eine/einen Job Coach 80 % für unser Team. 
+Weiter Informationen und Details zu der Stelle findest du im Stellenbeschrieb.
 
 
 
