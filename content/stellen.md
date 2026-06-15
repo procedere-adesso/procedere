@@ -11,7 +11,8 @@ Downloads:
 # Job Coach 80 %
 
 Wir suchen Verstärkung durch eine/einen Job Coach 80 % für unser Team. 
-Weiter Informationen und Details zu der Stelle findest du im Stellenbeschrieb.
+
+Weitere Informationen und Details zu der Stelle findest du im Stellenbeschrieb.
 
 
 
