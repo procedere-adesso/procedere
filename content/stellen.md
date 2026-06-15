@@ -4,7 +4,7 @@ Type: flyer
 Date: 2025-10-03
 Downloads:
     - Title: Stelleninserat Job Coach 80 % <br/>PDF Download
-      HRef: Stelleninserat.pdf
+      HRef: ../Stelleninserat.pdf
 ---
 
 # Job Coach 80 %
