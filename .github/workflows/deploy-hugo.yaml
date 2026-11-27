@@ -1,92 +1,106 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Build and deploy site
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches:
       - main
-
   pull_request:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
-# Allow one concurrent deployment
+# one run per branch; a newer push on a PR replaces the running build,
+# a deploy from main always runs to the end
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
-# Default to bash
 defaults:
   run:
     shell: bash
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.152.2
     steps:
-      - name: Cache Hugo Deb
-        uses: actions/cache@v4
-        id: cache-hugo
-        with:
-          path: ${{ runner.temp }}
-          key: hugo-${{ env.HUGO_VERSION }}
-      - name: Fetch Hugo Deb
-        if: steps.cache-hugo.outputs.cache-hit != 'true'
-        run: |
-            wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-      - name: Install Hugo
-        run: |
-            sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           submodules: recursive
-#      - name: Setup Pages
-#        id: pages
-#        uses: actions/configure-pages@v3
-      - name: Fetch resources directory from cache
-        uses: actions/cache@v4
+
+      # .tool-versions is the single source for the Hugo and Dart Sass versions
+      - name: Read tool versions
+        run: |
+          echo "HUGO_VERSION=$(awk '$1 ~ /hugo/ {print $2}' .tool-versions)" >> "$GITHUB_ENV"
+          echo "SASS_VERSION=$(awk '$1 ~ /dart-sass/ {print $2}' .tool-versions)" >> "$GITHUB_ENV"
+
+      - name: Cache tools
+        id: cache-tools
+        uses: actions/cache@v6
+        with:
+          path: ${{ runner.temp }}/tools
+          key: tools-hugo-${{ env.HUGO_VERSION }}-sass-${{ env.SASS_VERSION }}
+
+      - name: Download Hugo and Dart Sass
+        if: steps.cache-tools.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p "$RUNNER_TEMP/tools/hugo"
+          curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
+            | tar -xz -C "$RUNNER_TEMP/tools/hugo" hugo
+          curl -fsSL "https://github.com/sass/dart-sass/releases/download/${SASS_VERSION}/dart-sass-${SASS_VERSION}-linux-x64.tar.gz" \
+            | tar -xz -C "$RUNNER_TEMP/tools"
+
+      - name: Add tools to PATH
+        run: |
+          echo "$RUNNER_TEMP/tools/hugo" >> "$GITHUB_PATH"
+          echo "$RUNNER_TEMP/tools/dart-sass" >> "$GITHUB_PATH"
+
+      - name: Show tool versions
+        run: |
+          hugo version
+          sass --version
+
+      - name: Cache processed images
+        uses: actions/cache@v6
         with:
           path: resources
-          key: hugo-${{ env.HUGO_VERSION }}-resources-directory
+          key: hugo-resources-${{ hashFiles('content/**/*.jpg', 'content/**/*.png', 'config.yaml') }}
           restore-keys: |
-            hugo-${{ env.HUGO_VERSION }}-resources-directory
+            hugo-resources-
+
       - name: Build with Hugo
         env:
-          # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
+        run: hugo
+
+      # Deploy to the webhost (web-volki-01) with rsync over ssh.
+      # Setup:
+      #   - create an ssh key pair for user procedere on the webhost
+      #   - private key -> GitHub secret DEPLOY_KEY
+      #   - public key -> ~/.ssh/authorized_keys on the webhost:
+      #       command="rrsync /home/procedere/public_html",restrict PUBLIC_KEY_STRING_HERE
+      #   - DEPLOY_HOST is login.oetiker.ch
+      #   - DEPLOY_PORT is the port forwarded to ssh on the webhost
+      #   - DEPLOY_KNOWN_HOSTS is the host key line, as printed by
+      #       ssh-keyscan -p <DEPLOY_PORT> login.oetiker.ch
+      - name: Deploy
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
         run: |
-          # create ssh key pair for user procedere on webhost (web-volki-01)
-          #     add private key to github secrets as DEPLOY_KEY
-          #     add public key to ~/.ssh/authorized_keys on webhost like this: command="rrsync /home/procedere/public_html",restrict PUBLIC_KEY_STRING_HERE
-          # DEPLOY_HOST is login.oetiker.ch
-          # DEPLOY_PORT is whatever port is forwarded to ssh on login.oetiker.ch
-          hugo
-          eval $(ssh-agent -s)
-          ssh-add - <<< '${{ secrets.DEPLOY_KEY }}'
-          rsync -e 'ssh -p ${{ secrets.DEPLOY_PORT }} -o StrictHostKeyChecking=no' --archive --delete --exclude '*.jpg' public/* 'procedere@${{ secrets.DEPLOY_HOST }}:'
-
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: ./public
-
-  # Deployment job
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          if [ -n "$DEPLOY_KNOWN_HOSTS" ]; then
+            printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+            HOSTKEY_CHECK=yes
+          else
+            echo "::warning::secret DEPLOY_KNOWN_HOSTS is not set; the host key of the webhost is not checked"
+            HOSTKEY_CHECK=accept-new
+          fi
+          eval "$(ssh-agent -s)"
+          ssh-add - <<< "$DEPLOY_KEY"
+          rsync -e "ssh -p $DEPLOY_PORT -o StrictHostKeyChecking=$HOSTKEY_CHECK" \
+            --archive --delete --exclude '*.jpg' public/* "procedere@$DEPLOY_HOST:"
