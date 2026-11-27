@@ -1,8 +1,8 @@
-----
+---
 title: Patrick Peyer
 sort: 04 Patrick Peyer
 date: 2026.11.27
-role: Case Managerin / Job Coachin
+role: Job Coach
 email: patrick.peyer@procedere-cmg.ch
 phone: 062 207 00 17
 edu: 	
