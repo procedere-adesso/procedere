@@ -1,4 +1,5 @@
-languageCode: de-ch
+baseURL: https://www.procedere-cmg.ch/
+locale: de-ch
 title: Procedere Olten
 theme: wl-theme
 relativeURLs: true
@@ -15,7 +16,10 @@ params:
     wl-white: "#fff"
     wl-footer-color: "#000"
 imaging:
-  quality: 90
+  jpeg:
+    quality: 90
+  webp:
+    quality: 90
+    hint: picture
   resampleFilter: Lanczos
-  hint: picture
   anchor: Top
